@@ -1,0 +1,243 @@
+<div class="investment-container mat-elevation-z8">
+
+  <div class="back-button-container">
+    <button mat-icon-button aria-label="Retour" matTooltip="Retour" (click)="location.back()">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+  </div>
+
+  <ng-template [ngIf]="investment" [ngIfElse]="loading">
+
+    <div class="container">
+
+      <ng-template [ngIf]="!editingFlag" [ngIfElse]="editing">
+        <div class="row">
+          <div appearance="outline" class="col-1">
+            <h6>#</h6>
+            <p>{{investment.id}}</p>
+          </div>
+
+          <div appearance="outline" class="col-3">
+            <h6>Lycée</h6>
+            <p>{{investment.lycee}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>Ville</h6>
+            <p>{{investment.ville}}</p>
+          </div>
+
+          <div appearance="outline" class="col-4">
+            <h6>Opération</h6>
+            <p>{{investment.titreoperation}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>Etat d'avancement</h6>
+            <p>{{investment.etat_d_avancement}}</p>
+          </div>
+
+        </div>
+
+        <div class="row no-border">
+          <div appearance="outline" class="col-2">
+            <h6>Mandataire</h6>
+            <p>{{investment.mandataire}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>Entreprise</h6>
+            <p>{{investment.entreprise}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>PPI</h6>
+            <p>{{investment.ppi}}</p>
+          </div>
+
+          <div appearance="outline" class="col-3">
+            <h6>Maîtrise d'oeuvre</h6>
+            <p>{{investment.maitrise_d_oeuvre}}</p>
+          </div>
+
+          <div appearance="outline" class="col-3">
+            <h6>Mode de dévolution</h6>
+            <p>{{investment.mode_de_devolution}}</p>
+          </div>
+
+        </div>
+
+        <div class="row no-border">
+
+          <div appearance="outline" class="col-2">
+            <h6>Livraison</h6>
+            <p>{{investment.annee_de_livraison}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>Notification du marché</h6>
+            <p>{{investment.notification_du_marche}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>CAO Attribution</h6>
+            <p>{{investment.cao_attribution}}</p>
+          </div>
+
+          <div appearance="outline" class="col-1">
+            <h6>Votes</h6>
+            <p>{{investment.montant_des_ap_votes_en_meu}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>Code UAI</h6>
+            <p>{{investment.codeuai}}</p>
+          </div>
+
+          <div appearance="outline" class="col-2">
+            <h6>Individualisation</h6>
+            <p>{{investment.annee_d_individualisation}}</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div appearance="outline" class="col-2">
+            <h6>Enveloppe</h6>
+            <p>{{investment.enveloppe_prev_en_meu}}</p>
+          </div>
+
+          <div class="col-1 offset-9">
+            <button mat-flat-button aria-label="Modifier" matTooltip="Modifier" (click)="edit()" class="edit-button">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+
+        </div>
+      </ng-template>
+
+      <ng-template #editing>
+        <div class="row">
+          <mat-form-field appearance="outline" class="col-1">
+            <mat-label>#</mat-label>
+            <input matInput placeholder="Id" [(ngModel)]="investment.id" disabled>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-3">
+            <mat-label>Lycée</mat-label>
+            <input matInput placeholder="Lycée" [(ngModel)]="investment.lycee">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Ville</mat-label>
+            <input matInput placeholder="Ville" [(ngModel)]="investment.ville">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-4">
+            <mat-label>Opération</mat-label>
+            <input matInput placeholder="Opération" [(ngModel)]="investment.titreoperation">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Etat d'avancement</mat-label>
+            <input matInput placeholder="Etat d'avancement" [(ngModel)]="investment.etat_d_avancement">
+          </mat-form-field>
+
+        </div>
+
+        <div class="row no-border">
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Mandataire</mat-label>
+            <input matInput placeholder="Mandataire" [(ngModel)]="investment.mandataire">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Entreprise</mat-label>
+            <input matInput placeholder="Entreprise" [(ngModel)]="investment.entreprise">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>PPI</mat-label>
+            <input matInput placeholder="PPI" [(ngModel)]="investment.ppi">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-3">
+            <mat-label>Maîtrise d'oeuvre</mat-label>
+            <input matInput placeholder="Maîtrise d'oeuvre" [(ngModel)]="investment.maitrise_d_oeuvre">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-3">
+            <mat-label>Mode de dévolution</mat-label>
+            <input matInput placeholder="Mode de dévolution" [(ngModel)]="investment.mode_de_devolution">
+          </mat-form-field>
+        </div>
+
+        <div class="row no-border">
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Livraison</mat-label>
+            <input matInput placeholder="1994" [(ngModel)]="investment.annee_de_livraison">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Notification du marché</mat-label>
+            <input matInput placeholder="1994-06-20" [(ngModel)]="investment.notification_du_marche">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>CAO Attribution</mat-label>
+            <input matInput placeholder="1994-06-20" [(ngModel)]="investment.cao_attribution">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-1">
+            <mat-label>Votes</mat-label>
+            <input matInput placeholder="Votes" [(ngModel)]="investment.montant_des_ap_votes_en_meu">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Code UAI</mat-label>
+            <input matInput placeholder="Code UAI" [(ngModel)]="investment.codeuai">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Individualisation</mat-label>
+            <input matInput placeholder="1994" [(ngModel)]="investment.annee_d_individualisation">
+          </mat-form-field>
+
+        </div>
+
+        <div class="row">
+
+          <mat-form-field appearance="outline" class="col-2">
+            <mat-label>Enveloppe</mat-label>
+            <input matInput placeholder="Enveloppe" [(ngModel)]="investment.enveloppe_prev_en_meu">
+          </mat-form-field>
+
+          <div class="col-1 offset-9">
+            <button mat-flat-button aria-label="Enregistrer" matTooltip="Enregistrer" (click)="save()" class="save-button">
+              <mat-icon>done</mat-icon>
+            </button>
+          </div>
+
+        </div>
+      </ng-template>
+
+        <div class="row no-border">
+          <div class="col-12">
+            <agm-map [latitude]="investment.latitude" [longitude]="investment.longitude" [zoom]="12" class="map">
+              <agm-marker [latitude]="investment.latitude" [longitude]="investment.longitude">
+              </agm-marker>
+            </agm-map>
+          </div>
+        </div>
+    </div>
+
+  </ng-template>
+
+  <ng-template #loading>
+    <div class="loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+  </ng-template>
+
+</div>

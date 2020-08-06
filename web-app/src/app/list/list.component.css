@@ -1,0 +1,96 @@
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: #FA6C68;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9995;
+}
+
+
+/* Investment table */
+.investments-container {
+  z-index: 9;
+  position: relative;
+  min-height: 720px;
+  margin: 1% 1%;
+  background: #fff;
+}
+
+.investments-table-container {
+  position: relative;
+  max-height: 720px;
+  overflow: auto;
+}
+
+.investments-table {
+  width: 100%;
+}
+
+.loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate-limit-reached {
+  color: #980000;
+  max-width: 360px;
+  text-align: center;
+}
+
+.mat-column-number,
+.mat-column-state {
+  max-width: 64px;
+}
+
+.mat-column-created {
+  max-width: 124px;
+}
+
+.mat-header-cell {
+  font-size: 16px;
+  color: #FA6C68;
+}
+
+.mat-cell{
+  max-width: 140px;
+  padding-right: 1%;
+}
+
+.mat-icon{
+  color: #FA6C68;
+}
+
+button:focus{
+  outline: none;
+}
+
+.mat-icon-button .mat-icon{
+  transition: ease-in-out 150ms;
+}
+.mat-icon-button:hover .mat-icon{
+  color: #324C5D;
+  transition: ease-in-out 150ms;
+}
+
+.mat-paginator{
+  position: absolute;
+  bottom: -56px;
+  width: 100%;
+}

@@ -1,0 +1,76 @@
+.investment-container {
+  z-index: 9;
+  position: relative;
+  background: #fff;
+  margin: 1%;
+  padding: 1%;
+  min-height: 776px;
+}
+
+.mat-spinner{
+  margin: auto;
+  margin-top: 20%;
+}
+
+.mat-form-field{
+  color: #324B5C;
+}
+.mat-form-label {
+  color: #FA6C68;
+}
+
+.row{
+  padding-top: 2%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.map{
+  width: 100%;
+  height: 300px;
+}
+
+.back-button-container{
+  position: absolute;
+  left: 2%;
+  top: 3%;
+  color: #000;
+}
+
+.edit-button{
+  background-color: #FA6C68;
+  color: #fff;
+  height: 45px;
+  min-width: 45px;
+}
+.save-button{
+  background-color: #34dd34;
+  color: #fff;
+  height: 45px;
+  min-width: 45px;
+}
+
+.no-border{
+  border: none;
+}
+
+h6{
+  color: #FA6C68;
+}
+
+p{
+  color: #324B5C
+}
+
+button:focus{
+  outline: none;
+}
+
+.mat-icon-button .mat-icon{
+  color: #FA6C68;
+  transition: ease-in-out 150ms;
+}
+
+.mat-icon-button:hover .mat-icon{
+  color: #324C5D;
+  transition: ease-in-out 150ms;
+}

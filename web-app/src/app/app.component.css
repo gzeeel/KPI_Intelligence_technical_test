@@ -1,0 +1,31 @@
+.mat-toolbar{
+  z-index: 99;
+}
+.mat-icon{
+  color: #FA6C68;
+}
+button:focus{
+  outline: none;
+}
+.app-title{
+  cursor: pointer;
+}
+.app-title:focus{
+  outline: none;
+}
+
+.mat-icon-button{
+  transition: ease-in-out 150ms;
+}
+.mat-icon-button .mat-icon{
+  transition: ease-in-out 150ms;
+}
+
+.mat-icon-button:hover{
+  background-color: #324C5D;
+  transition: ease-in-out 150ms;
+}
+.mat-icon-button:hover .mat-icon{
+  color: #fff;
+  transition: ease-in-out 150ms;
+}

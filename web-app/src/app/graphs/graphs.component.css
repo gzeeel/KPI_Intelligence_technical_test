@@ -1,0 +1,14 @@
+
+.graphs-container {
+  z-index: 9;
+  position: relative;
+  background: #fff;
+  margin: 1%;
+  padding: 1%;
+  min-height: 776px;
+}
+
+.mat-spinner{
+  margin: auto;
+  margin-top: 20%;
+}

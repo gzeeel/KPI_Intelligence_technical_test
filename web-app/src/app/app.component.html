@@ -1,0 +1,58 @@
+<!--
+* PHLY - Versatile Coming Soon Template
+* Build Date: October 2015
+* Last Update: October 2018
+* Author: Madeon08
+* Copyright (C) 20XX Madeon08
+* This is a premium product available exclusively here : https://themeforest.net/user/Madeon08/portfolio
+* -->
+<!DOCTYPE html>
+<html lang="en-us" class="no-js" ng-app="TheBeerScan">
+
+	<head>
+		<meta charset="utf-8">
+        <title>KPI Intelligence | Investments Manager</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Everaert Anthony">
+        <meta name="title" content ="KPI Intelligence | Investments Manager">
+        <!-- ================= Favicon ================== -->
+        <!-- Standard -->
+        <link rel="shortcut icon" href="img/favicon.png">
+        <!-- Retina iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon-retina-ipad.png">
+        <!-- Retina iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon-retina-iphone.png">
+        <!-- Standard iPad Touch Icon-->
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon-standard-ipad.png">
+        <!-- Standard iPhone Touch Icon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon-standard-iphone.png">
+	</head>
+
+	<body>
+
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/list">
+          <mat-icon>list</mat-icon>
+          <span>Liste des investissements</span>
+        </button>
+        <button mat-menu-item routerLink="/graphs">
+          <mat-icon>pie_chart</mat-icon>
+          <span>Graphiques</span>
+        </button>
+      </mat-menu>
+      <span class="app-title" routerLink="/">Gestionnaire d'investissements</span>
+    </mat-toolbar>
+  <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+  <div [@routeAnimations]="o && o.activatedRouteData && o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
+
+	</body>
+
+</html>
+

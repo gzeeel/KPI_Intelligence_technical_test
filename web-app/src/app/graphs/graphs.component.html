@@ -1,0 +1,33 @@
+<div class="graphs-container mat-elevation-z8">
+  <div class="container">
+
+    <ng-template [ngIf]="!isLoadingResults" [ngIfElse]="loading">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType">
+          </canvas>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 2%;">
+        <div class="col-8 offset-2">
+          <canvas baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [chartType]="lineChartType">
+          </canvas>
+        </div>
+
+      </div>
+    </ng-template>
+
+    <ng-template #loading>
+      <div class="loading-shade" *ngIf="isLoadingResults">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      </div>
+    </ng-template>
+
+  </div>
+</div>
